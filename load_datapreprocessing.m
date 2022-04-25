@@ -13,6 +13,9 @@
 %           ('Loadforecasts_errormeasures.xlsx')
 %           Error measurements ('Loadforecasts_errormeasures.xlsx')
 
+% created by: Mira Watermeyer, Analytics and Statistics, Institute for Operations Research, Karlsruhe Institute for Technology
+%             mira.watermeyer@kit.edu
+
 
 clc
 clear
