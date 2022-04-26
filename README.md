@@ -12,7 +12,7 @@ Data preprocessing, Day-ahead electricity prices, Energy system modelling, Load 
 tba
 
 ### The code reproduces the benchmarks from the paper 
-Note that model output files are not uploaded to github due to limits on individual file size and on repository size in general. 
+
 
 ### Citing IntEG
 
