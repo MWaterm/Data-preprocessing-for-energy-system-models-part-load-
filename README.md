@@ -1,5 +1,5 @@
 # Data Preprocessing for Energy System Models 
-# Load Data Preprocessing
+## Load Data Preprocessing
 
 ### Thomas Möbius, Mira Watermeyer, Oliver Grothe, Felix Müsgens
 
@@ -12,7 +12,8 @@ Data preprocessing, Day-ahead electricity prices, Energy system modelling, Load 
 tba
 
 ### The code reproduces the benchmarks from the paper 
-
+This repository includes all relevant files for the load data preprocessing part of the paper. To reproduce the load data preprocessing, the code "load_datapreprocessing" has to be run. It was tested on Matlab R2020b. The Excel-Files "Load_DayAheadForecastAndActual_DL-LU_2016to2019.xlsx" and "holidaygermany.xlsx" are needed to run the code. "Output_Impr_loadforecast_2017to2019.xlsx" contains the TSO day-ahead load prediction as well as the actual load and the improved load forecast (load data preprocessing). 
+The repository including all relevant files for the energy system model part of the paper can be found here: https://github.com/BTU-EnerEcon/Data-PreProcessing-for-Energy-System-Models.
 
 ### Citing IntEG
 
