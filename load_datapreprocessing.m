@@ -8,10 +8,7 @@
 %           The whole model is estimated for every day-ahead forecast
 %           iteratively and uses historical data from the last year for
 %           estimation; the forecast is done as 24-hour-ahead forecast
-% OUTPUT:   Improved load forecast ('Loadforecasts.xlsx')
-%           Estimated parameters for every forecasted day
-%           ('Loadforecasts_errormeasures.xlsx')
-%           Error measurements ('Loadforecasts_errormeasures.xlsx')
+% OUTPUT:   Improved load forecast
 
 % created by: Mira Watermeyer; Department of Analytics and Statistics, Institute for Operations Research, Karlsruhe Institute for Technology
 %             mira.watermeyer@kit.edu
@@ -264,21 +261,6 @@ catch
     warning(['Problem in estimation and forecast with used model, period size ', char(l_rw)]);
 end
 
-
-
-
-%% Short overview/save in files
-MSE_seasonal = mean((Data_forecastedTime.Load - Data_forecastedTime.Loadforecast - forecast_day_ahead_summary.Seasonality).^2);
-MAE_seasonal = mean(abs(Data_forecastedTime.Load - Data_forecastedTime.Loadforecast - forecast_day_ahead_summary.Seasonality));
-
-% Save in Excel
-sheetcounter = 1; 
-writetimetable(Data_forecastedTime,'Loadforecasts.xlsx','Sheet',sheetcounter,'Range','A1')
-writetimetable(forecast_day_ahead_summary,'Loadforecasts.xlsx','Sheet',sheetcounter,'Range','F1')
-writecell(error_old_new_mat(2:end, 2:end),  'Loadforecasts_errormeasures.xlsx', 'Range', ['A', num2str(2*sheetcounter-1)])
-writematrix([MSE_seasonal; MAE_seasonal], 'Loadforecasts_errormeasures.xlsx', 'Range', ['C', num2str(2*sheetcounter-1)])
-        
-writematrix(param_estimates_summary, 'Loadforecasts_ParamEstim.xlsx', 'Sheet', sheetcounter, 'Range', 'B2')
 
 
 
